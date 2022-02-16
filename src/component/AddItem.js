@@ -31,8 +31,8 @@ const AddItem = () => {
         submit
       </button>
       <div>
-        {lists.map((e) => {
-          return <ListItem e={e} />;
+        {lists.map((e, index) => {
+          return <ListItem e={e} key={index} />;
         })}
       </div>
     </div>

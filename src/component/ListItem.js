@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { editList, removeList } from "../redux/action";
 import moment from "moment";
-
 export default function ListItem({ e }) {
   const [inputEdit, setInputEdit] = useState(e.name);
   const [isEdit, setIsEdit] = useState(false);

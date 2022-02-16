@@ -11,11 +11,12 @@ const reducer = (
       localStorage.setItem("todoRedux", JSON.stringify(state));
       return state;
 
-    case EDIT_LIST:
+    case EDIT_LIST: {
       let newList = state.filter((list) => list.id === action.payload.id);
       state[newList[0].id] = action.payload;
       localStorage.setItem("todoRedux", JSON.stringify(state));
       return state;
+    }
     case DELETE_LIST:
       state = state.filter((list) => list.id !== action.payload.id);
       localStorage.setItem("todoRedux", JSON.stringify(state));
